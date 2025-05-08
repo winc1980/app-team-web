@@ -80,7 +80,7 @@ export default function Header() {
           </footer>
         </div>
       </div>
-      <header className="flex justify-center w-full sticky top-0 border-b border-white/20 px-4 z-10 backdrop-blur-sm backdrop-saturate-200 bg-gradient-to-b from-black to-transparent">
+      <header className="flex justify-center w-full sticky top-0 border-b border-white/20 px-4 z-10 backdrop-blur-sm backdrop-saturate-[400%] bg-gradient-to-b from-black to-transparent">
         <div className="flex w-full max-w-7xl gap-3 justify-between py-4">
           <Link href="/">
             <Image
@@ -93,36 +93,36 @@ export default function Header() {
           </Link>
           <Menu className="h-6 lg:hidden" onClick={() => setIsOpen(!isOpen)} />
           <div className="hidden lg:block">
-            <div className="flex gap-6 items-center">
-              <div className="font-mono">
+            <div className="flex gap-6 items-center uppercase font-medium">
+              <div className="opacity-70 hover:opacity-100">
                 <Link href="/">
                   <div>
                     About
                   </div>
                 </Link>
               </div>
-              <div className="font-mono">
+              <div className="opacity-70 hover:opacity-100">
                 <Link href="/">
                   <div>
                     Activities
                   </div>
                 </Link>
               </div>
-              <div className="font-mono">
+              <div className="opacity-70 hover:opacity-100">
                 <Link href="/">
                   <div>
                     Projects
                   </div>
                 </Link>
               </div>
-              <div className="font-mono">
+              <div className="opacity-70 hover:opacity-100">
                 <Link href="/">
                   <div>
                     Schedules
                   </div>
                 </Link>
               </div>
-              <div className="font-mono">
+              <div className="opacity-70 hover:opacity-100">
                 <Link href="/">
                   <div>
                     News
