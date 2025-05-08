@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,10 +12,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@layer utilities {
+  .palt {
+    font-feature-settings: 'palt';
+  }
+
+  .to-text-gradient {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .mono {
+    font-family: var(--font-mono);
+  }
+
+  .text-4-5xl {
+    font-size: calc((var(--text-4xl) + var(--text-5xl)) / 2)
+      /* 2.625rem = 42px */
+    ;
+    line-height: var(--tw-leading, calc((var(--text-4xl--line-height) + var(--text-5xl--line-height)) / 2)
+        /* 1 */
+      );
   }
 }
 
