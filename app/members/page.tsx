@@ -9,10 +9,10 @@ export default function Home() {
           <div className="mt-24 lg:mt-8 mx-2 px-2">
             <div className="flex flex-col gap-6 text-center lg:text-start">
               <span className="text-4-5xl  lg:text-6xl font-semibold palt">
-                <b>WINC</b>アプリチーム
+                メンバー紹介
               </span>
               <span className="break-keep">
-                A Quick Brown Fox Jumps Over The Lazy Dog
+                メンバー紹介
               </span>
             </div>
           </div>
