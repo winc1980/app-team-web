@@ -5,13 +5,13 @@ import { DownloadIcon } from "lucide-react";
 
 export default function Header() {
   return (
-    <header className="flex justify-center w-full sticky top-0 bg-background border-b border-black/5 px-4 z-10">
+    <header className="flex justify-center w-full sticky top-0 border-b border-black/5 px-4 z-10">
       <div className="flex w-full max-w-7xl gap-3 justify-between py-4">
         <Link href="/">
           <Image
-            src="/app=team-logo.svg"
-            width={36}
-            height={36}
+            src="/app-team-logo.svg"
+            width={96}
+            height={28}
             alt="WINCアプリチーム"
             className="h-6 lg:h-9"
           />
@@ -29,7 +29,7 @@ export default function Header() {
               <Link href="https://x.com/wasedule">
                 <div>
                   <Image
-                    src="/external-assets/x-logo/logo-black.png"
+                    src="/external-assets/x-logo/logo-white.png"
                     width={24}
                     height={24}
                     alt="公式X - @wasedule"
@@ -42,7 +42,7 @@ export default function Header() {
               <Link href="https://www.instagram.com/wasedule/">
                 <div>
                   <Image
-                    src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/03 Black Glyph/Instagram_Glyph_Black.svg"
+                    src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_white.svg"
                     width={24}
                     height={24}
                     alt="公式Instagram - wasedule"
