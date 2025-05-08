@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col justify-center items-center px-4 py-8 gap-8">
+    <footer className="flex flex-col justify-center items-center px-4 py-8 gap-8 bg-gradient-to-b from-transparent to-black">
       <section
         className="flex items-center
           gap-8 justify-between w-full max-w-7xl mt-16 px-3"
@@ -11,7 +11,7 @@ export default function Footer() {
         <Link href="">
           <Image
             src="/app-team-logo.svg"
-            width={36}
+            width={128}
             height={36}
             alt="WINC: アプリチーム"
           />
@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="flex flex-wrap max-w-7xl gap-8">
           <Link href="https://x.com/">
             <Image
-              src="/external-assets/x-logo/logo-black.png"
+              src="/external-assets/x-logo/logo-white.png"
               width={31}
               height={31}
               alt="公式X - @"
@@ -28,7 +28,7 @@ export default function Footer() {
           </Link>
           <Link href="https://www.instagram.com/">
             <Image
-              src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/03 Black Glyph/Instagram_Glyph_Black.svg"
+              src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg"
               width={33}
               height={33}
               alt="公式Instagram - "
@@ -47,14 +47,15 @@ export default function Footer() {
       <section className="flex justify-between items-center w-full max-w-7xl text-end py-6 border-t-2 border-gray-100">
         <div>
           <Image
-            src="/WINC-logo.svg"
-            width={200}
+            src="/winc-logo.svg"
+            width={48}
             height={36}
             alt="WINC"
+            className="m-4"
           />
-          <p className="text-left text-sm text-gray-400 px-3">Created and developed only by waseda students. <br />No other company, organization, or Waseda University is related.</p>
+          <p className="text-left text-sm text-gray-400 px-3 font-mono">Created and developed only by waseda students. <br />No other company, organization, or Waseda University is related.</p>
         </div>
-        <p className="text-sm font-semibold p-3 text-gray-600 w-[-webkit-fill-available] lg:w-auto">© 2025 WINC: App Team</p>
+        <p className="text-sm font-semibold p-3 text-gray-600 w-[-webkit-fill-available] lg:w-auto font-mono">© 2025 WINC: App Team</p>
       </section>
     </footer>
   )
