@@ -39,7 +39,7 @@ export default function Home() {
               <span className="text-4-5xl  lg:text-6xl font-semibold palt">
                 Realise Your Idea in <span className="bg-linear-to-r from-cyan-500 to-blue-500 to-text-gradient">Waseda</span>
               </span>
-              <span className="break-keep">
+              <span className="break-keep font-mono">
                 A Quick Brown Fox Jumps Over The Lazy Dog
               </span>
             </div>

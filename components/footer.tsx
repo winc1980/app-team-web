@@ -53,9 +53,9 @@ export default function Footer() {
             alt="WINC"
             className="m-4"
           />
-          <p className="text-left text-sm text-gray-400 px-3">Created and developed only by waseda students. <br />No other company, organization, or Waseda University is related.</p>
+          <p className="text-left text-sm text-gray-400 px-3 font-mono">Created and developed only by waseda students. <br />No other company, organization, or Waseda University is related.</p>
         </div>
-        <p className="text-sm font-semibold p-3 text-gray-600 w-[-webkit-fill-available] lg:w-auto">© 2025 WINC: App Team</p>
+        <p className="text-sm font-semibold p-3 text-gray-600 w-[-webkit-fill-available] lg:w-auto font-mono">© 2025 WINC: App Team</p>
       </section>
     </footer>
   )
