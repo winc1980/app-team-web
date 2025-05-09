@@ -36,13 +36,6 @@ export default function Header() {
                   </div>
                 </Link>
               </div>
-              <div className="font-mono">
-                <Link href="/blog">
-                  <div>
-                    Blog
-                  </div>
-                </Link>
-              </div>
             </ul>
             <footer className="flex flex-col text-zinc-500 text-xs px-8 my-8 gap-8">
               <div className="flex justify-center flex-wrap max-w-7xl gap-8">
