@@ -36,6 +36,13 @@ export default function Header() {
                   </div>
                 </Link>
               </div>
+              <div className="font-mono">
+                <Link href="/news">
+                  <div>
+                    News
+                  </div>
+                </Link>
+              </div>
             </ul>
             <footer className="flex flex-col text-zinc-500 text-xs px-8 my-8 gap-8">
               <div className="flex justify-center flex-wrap max-w-7xl gap-8">
@@ -101,6 +108,13 @@ export default function Header() {
                 <Link href="/projects">
                   <div>
                     Projects
+                  </div>
+                </Link>
+              </div>
+              <div className="opacity-70 hover:opacity-100">
+                <Link href="/news">
+                  <div>
+                    News
                   </div>
                 </Link>
               </div>

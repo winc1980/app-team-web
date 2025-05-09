@@ -37,8 +37,11 @@ export default function Footer() {
         </div>
       </section>
       <section className="flex flex-col items-start max-w-7xl w-full">
-        <Link href="/members" className="p-2 text-sm font-semibold"> 
-          メンバー紹介 
+        <Link href="/news" className="p-2 text-sm font-semibold">
+          ニュース
+        </Link>
+        <Link href="/members" className="p-2 text-sm font-semibold">
+          メンバー紹介
         </Link>
         <Link href="/projects" className="p-2 text-sm font-semibold">
           プロジェクト
