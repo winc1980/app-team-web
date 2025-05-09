@@ -52,9 +52,6 @@ export default function Footer() {
         <Link href="" className="p-3 text-sm font-semibold">
           プライバシーポリシー
         </Link>
-        <Link href="" className="p-3 text-sm font-semibold">
-          利用規約
-        </Link>
       </section>
       <section className="flex justify-between items-center w-full max-w-7xl text-end py-6 border-t-2 border-gray-100">
         <div>
