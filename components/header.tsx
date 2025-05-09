@@ -37,9 +37,9 @@ export default function Header() {
                 </Link>
               </div>
               <div className="font-mono">
-                <Link href="/blog">
+                <Link href="/news">
                   <div>
-                    Blog
+                    News
                   </div>
                 </Link>
               </div>
@@ -112,9 +112,9 @@ export default function Header() {
                 </Link>
               </div>
               <div className="opacity-70 hover:opacity-100">
-                <Link href="/blog">
+                <Link href="/news">
                   <div>
-                    Blog
+                    News
                   </div>
                 </Link>
               </div>
