@@ -111,13 +111,6 @@ export default function Header() {
                   </div>
                 </Link>
               </div>
-              <div className="opacity-70 hover:opacity-100">
-                <Link href="/blog">
-                  <div>
-                    Blog
-                  </div>
-                </Link>
-              </div>
               <div>
                 <Link href="https://x.com/WINC_waseda">
                   <div>
