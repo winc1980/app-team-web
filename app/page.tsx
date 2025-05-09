@@ -1,72 +1,16 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import Script from "next/script";
 
 export default function Home() {
   return (
     <>
-      <div>
-        <div
-          id="homepage-background"
-          className="fixed h-screen w-screen -z-1 top-0 mix-blend-multiply"
-        ></div>
-        <div
-          id="homepage-background2"
-          className="fixed h-screen w-screen -z-1 top-0"
-        ></div>
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"
-          strategy="beforeInteractive"
-        />
-        {/* <Script
-          src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
-          strategy="beforeInteractive"
-        /> */}
-        <Script id="script">
-          {`VANTA.NET({
-              el: "#homepage-background",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              color: 0xffffff,
-              backgroundColor: 0x0
-            });
-            /* VANTA.BIRDS({
-              el: "#homepage-background2",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color1: 0xc2ff,
-  color2: 0xff00b4,
-  colorMode: "lerpGradient",
-  backgroundAlpha: 0.00
-            }); */`}
-        </Script>
-      </div>
       <main className="flex flex-col items-center gap-20">
         <section className="flex w-full max-w-7xl justify-start items-center flex-col lg:flex-row lg:gap-12 min-h-[80vh]">
           <div className="mt-24 lg:mt-8 mx-2 px-2">
             <div className="flex flex-col gap-6 text-center lg:text-start">
               <span className="text-5xl  lg:text-7xl font-light palt break-keep">
-                僕たちは、
-                <span className="bg-linear-to-r from-red-500 to-yellow-500 to-text-gradient">
-                  魔法使い
-                </span>
-                に<wbr />
-                なれる。
+                アプリで、世界を変えよう。
               </span>
               <span className="break-keep font-mono">
                 Realise Your Vision in Waseda with{" "}
@@ -87,9 +31,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="backdrop-blur w-full flex flex-col items-center border border-white/10">
+        <section className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center border border-white/10">
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
-            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10"></div>
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
               {/* アプリチームについて */}
               <div className="h-[80vh] border-b border-white/10 flex flex-col justify-center">
@@ -175,7 +119,7 @@ export default function Home() {
                 </p>
               </section>
             </div>
-            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed [--pattern-fg:var(--color-gray-950)]/5 max-lg:hidden dark:[--pattern-fg:var(--color-white)]/10"></div>
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
           </div>
         </section>
       </main>
