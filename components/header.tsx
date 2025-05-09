@@ -16,37 +16,30 @@ export default function Header() {
           <div className="flex flex-col h-full justify-between pt-48 pb-24">
             <ul className="flex flex-col gap-4 text-xl font-medium px-8">
               <div className="font-mono">
-                <Link href="/">
+                <Link href="/members">
                   <div>
-                    About
+                    Members
                   </div>
                 </Link>
               </div>
               <div className="font-mono">
-                <Link href="/">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSd77gukiHN_CpEvbhcMd7awd3VZqvx-f-I2g6kpYK2hUVhHxA/viewform">
                   <div>
-                    Activities
+                    Contact
                   </div>
                 </Link>
               </div>
               <div className="font-mono">
-                <Link href="/">
+                <Link href="/projects">
                   <div>
                     Projects
                   </div>
                 </Link>
               </div>
               <div className="font-mono">
-                <Link href="/">
+                <Link href="/blog">
                   <div>
-                    Schedules
-                  </div>
-                </Link>
-              </div>
-              <div className="font-mono">
-                <Link href="/">
-                  <div>
-                    News
+                    Blog
                   </div>
                 </Link>
               </div>
@@ -98,42 +91,35 @@ export default function Header() {
           <div className="hidden lg:block">
             <div className="flex gap-6 items-center uppercase font-medium">
               <div className="opacity-70 hover:opacity-100">
-                <Link href="/">
+                <Link href="/members">
                   <div>
-                    About
+                    Members
                   </div>
                 </Link>
               </div>
               <div className="opacity-70 hover:opacity-100">
-                <Link href="/">
+                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSd77gukiHN_CpEvbhcMd7awd3VZqvx-f-I2g6kpYK2hUVhHxA/viewform">
                   <div>
-                    Activities
+                    Contact
                   </div>
                 </Link>
               </div>
               <div className="opacity-70 hover:opacity-100">
-                <Link href="/">
+                <Link href="/projects">
                   <div>
                     Projects
                   </div>
                 </Link>
               </div>
               <div className="opacity-70 hover:opacity-100">
-                <Link href="/">
+                <Link href="/blog">
                   <div>
-                    Schedules
-                  </div>
-                </Link>
-              </div>
-              <div className="opacity-70 hover:opacity-100">
-                <Link href="/">
-                  <div>
-                    News
+                    Blog
                   </div>
                 </Link>
               </div>
               <div>
-                <Link href="https://x.com/">
+                <Link href="https://x.com/WINC_waseda">
                   <div>
                     <Image
                       src="/external-assets/x-logo/logo-white.png"
@@ -146,7 +132,7 @@ export default function Header() {
                 </Link>
               </div>
               <div>
-                <Link href="https://www.instagram.com/">
+                <Link href="https://www.instagram.com/waseda_winc/">
                   <div>
                     <Image
                       src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_white.svg"
@@ -157,11 +143,11 @@ export default function Header() {
                   </div>
                 </Link>
               </div>
-              <div>
-                <Link href='' className="flex items-center text-sm">
-                  <div className="flex gap-1 bg-foreground text-background p-3">
+              <div className="min-w-[166px]">
+                <Link href="https://secure.register.winc.ne.jp/">
+                  <div className="flex gap-0.5  hover:gap-1.5  p-3 rounded-xl duration-300 button-slider from-purple-500 to-purple-500">
                     新入生向け情報
-                    <ArrowRight className="h-5" />
+                    <ArrowRight />
                   </div>
                 </Link>
               </div>

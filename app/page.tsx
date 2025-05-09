@@ -21,7 +21,7 @@ export default function Home() {
               </span>
             </div>
             <div className="flex flex-wrap gap-4 my-6  justify-center lg:justify-start">
-              <Link href="">
+              <Link href="https://secure.register.winc.ne.jp/">
                 <div className="flex gap-1  hover:gap-3 bg-foreground text-background p-4 rounded-2xl transition-all">
                   新入生向け情報
                   <ArrowRight />
