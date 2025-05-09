@@ -43,9 +43,6 @@ export default function Footer() {
         <Link href="/members" className="p-2 text-sm font-semibold"> 
           メンバー紹介 
         </Link>
-        <Link href="/schedule" className="p-2 text-sm font-semibold">  
-          スケジュール
-        </Link>
         <Link href="/projects" className="p-2 text-sm font-semibold">
           プロジェクト
         </Link>
