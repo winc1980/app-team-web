@@ -1,6 +1,6 @@
+import MemberCell from "@/components/members/MemberCell";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import MemberCell from "@/components/members/MemberCell";
 import MembersSection from "@/components/members/MembarsSection";
 import Script from "next/script";
 
