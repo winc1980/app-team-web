@@ -17,7 +17,7 @@ export default function Footer() {
           />
         </Link>
         <div className="flex flex-wrap max-w-7xl gap-8">
-          <Link href="https://x.com/">
+          <Link href="https://x.com/WINC_waseda">
             <Image
               src="/external-assets/x-logo/logo-white.png"
               width={31}
@@ -26,7 +26,7 @@ export default function Footer() {
               className="p-0.5"
             />
           </Link>
-          <Link href="https://www.instagram.com/">
+          <Link href="https://www.instagram.com/waseda_winc/">
             <Image
               src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg"
               width={33}
@@ -37,11 +37,11 @@ export default function Footer() {
         </div>
       </section>
       <section className="flex flex-col items-start max-w-7xl w-full">
-        <Link href="/blog" className="p-2 text-sm font-semibold"> 
-          ブログ 
+        <Link href="/blog" className="p-2 text-sm font-semibold">
+          ブログ
         </Link>
-        <Link href="/members" className="p-2 text-sm font-semibold"> 
-          メンバー紹介 
+        <Link href="/members" className="p-2 text-sm font-semibold">
+          メンバー紹介
         </Link>
         <Link href="/projects" className="p-2 text-sm font-semibold">
           プロジェクト
