@@ -1,7 +1,7 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
@@ -22,7 +22,7 @@ export default function Home() {
         text: "アプリで、世界を変えよう。",
         duration: 2,
       });
-      let tl= gsap.timeline()
+      const tl = gsap.timeline()
       tl.fromTo(
         "#hero-main-typo",
         1,
@@ -41,8 +41,8 @@ export default function Home() {
   );
   useGSAP(
     () => {
-      let splitChars = SplitText.create('.gsap-chars', { type: "chars" });
-      let tlChars = gsap.timeline({
+      const splitChars = SplitText.create('.gsap-chars', { type: "chars" });
+      const tlChars = gsap.timeline({
         scrollTrigger: {
           trigger: ".gsap-chars",
           start: "top bottom",
@@ -57,8 +57,8 @@ export default function Home() {
         stagger: 0.05,
       });
 
-      let splitLines = SplitText.create(".gsap-lines", { type: "lines",mask:'lines' });
-      let tlLines = gsap.timeline({
+      const splitLines = SplitText.create(".gsap-lines", { type: "lines", mask: 'lines' });
+      const tlLines = gsap.timeline({
         scrollTrigger: {
           trigger: ".gsap-lines",
           start: "top bottom",
@@ -118,25 +118,21 @@ export default function Home() {
               {/* アプリチームについて */}
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
                 <section className="gsap-trigger border-t border-b border-white/10 w-full max-w-7xl py-32">
-                  <h2 className="overflow-hidden text-5xl font-light w-full divide-effect">
+                  <h2 className="overflow-hidden text-7xl font-light w-full divide-effect">
                     <p className="font-mono text-sm opacity-60 px-1">
                       About(us);
                     </p>
-                    <div className="gsap gsap-chars">アプリチームについて</div>
+                    <div className="gsap gsap-chars ">code <span className="to-text-gradient-child *:bg-linear-to-r *:from-rose-600 *:to-fuchsia-600">=</span> <span className="to-text-gradient-child *:bg-linear-to-r *:from-yellow-400 *:to-orange-400">new</span> Vision<span className="to-text-gradient-child *:bg-linear-to-b *:from-cyan-600 *:to-indigo-600">()</span>;</div>
                   </h2>
                   <div className="overflow-hidden text-lg text-foreground my-8 divide-effect">
-                    <div className="gsap gsap-lines">
-                      アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                      <br />
-                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
-                      <br />
-                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
-                      <br />
-                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
-                      <br />
-                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
-                      <br />
-                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    <div className="gsap gsap-lines text-base/12">
+                      <p className="text-4xl/16 font-light">コードを書いて、未来をえがく。</p>
+                      アプリチームでは起業やビジネス創出を目標として最先端技術を用いたアプリ開発を行います。<br />
+                      実際のシステム開発現場で用いられるプロジェクト管理の方法を採用し、3〜5人のチームでアプリ開発を行います。<br />
+                      プロジェクトに関わるメンバーのマネジメントが、あなたにとってエンジニア以外の進路にも活きる経験を生みます。<br />
+                      ユーザー体験の向上やコスト削減を目指し、ステークホルダーとの交渉や関係性の構築にも取り組みます。<br />
+                      その過程で得た知見が、経営者的視点の獲得につながります。<br />
+                      個人開発では得られないチーム開発のノウハウを学び、就職後にも生きる経験と繋がりを得ることができます。
                     </div>
                   </div>
                 </section>

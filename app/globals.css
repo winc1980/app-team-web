@@ -17,6 +17,11 @@
     font-feature-settings: "palt";
   }
 
+  .to-text-gradient-child>* {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .to-text-gradient {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -28,22 +33,20 @@
 
   .text-4-5xl {
     font-size: calc((var(--text-4xl) + var(--text-5xl)) / 2)
-      /* 2.625rem = 42px */;
-    line-height: var(
-      --tw-leading,
-      calc((var(--text-4xl--line-height) + var(--text-5xl--line-height)) / 2)
+      /* 2.625rem = 42px */
+    ;
+    line-height: var(--tw-leading,
+        calc((var(--text-4xl--line-height) + var(--text-5xl--line-height)) / 2)
         /* 1 */
-    );
+      );
   }
 
   .button-slider {
-    background-image: linear-gradient(
-      270deg,
-      #fff 0,
-      #fff 50%,
-      var(--tw-gradient-from) 0,
-      var(--tw-gradient-to)
-    );
+    background-image: linear-gradient(270deg,
+        #fff 0,
+        #fff 50%,
+        var(--tw-gradient-from) 0,
+        var(--tw-gradient-to));
     background-position: 100% 0;
     background-size: 200% auto;
     color: black;
