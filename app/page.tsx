@@ -5,42 +5,90 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/all";
 
 export default function Home() {
   gsap.registerPlugin(TextPlugin);
-  const heroMainText = useRef(null);
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(SplitText);
+  const heroAnimScope = useRef(null);
   const scope = useRef(null);
 
-  useEffect(() => {
+  useGSAP(
+    () => {
+      gsap.to("#hero-main-typo", {
+        autoAlpha: 1,
+        text: "アプリで、世界を変えよう。",
+        duration: 2,
+      });
+      let tl= gsap.timeline()
+      tl.fromTo(
+        "#hero-main-typo",
+        1,
+        {
+          "border-right-color": "rgba(255,255,255,1)",
+        },
+        {
+          "border-right-color": "rgba(255,255,255,0)",
+          repeat: -1,
+          ease: "steps(1)",
+        },
+        0
+      );
+    },
+    { scope: heroAnimScope }
+  );
+  useGSAP(
+    () => {
+      let splitChars = SplitText.create('.gsap-chars', { type: "chars" });
+      let tlChars = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".gsap-chars",
+          start: "top bottom",
+          end: "+=66.6%", // end after scrolling 500px beyond the start
+          scrub: true,
+        },
+      });
+      tlChars.from(splitChars.chars, {
+        duration: 1,
+        y: 100,
+        autoAlpha: 0,
+        stagger: 0.05,
+      });
 
-    gsap.to(heroMainText.current, {
-      autoAlpha: 1,
-      text: "アプリで、世界を変えよう。",
-      duration: 2,
-    });
-  }, []);
-
-  useGSAP(() => {
-    gsap.to('.divide-effect', {
-      delay: 0.2,
-      duration: 0.5,
-      ease: "power2.out", //型がリテラル型なので注意
-      stagger: 0.05,
-      y: 0,
-    });
-
-  }, { scope: scope });
-
+      let splitLines = SplitText.create(".gsap-lines", { type: "lines",mask:'lines' });
+      let tlLines = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".gsap-lines",
+          start: "top bottom",
+          end: "+=66.6%", // end after scrolling 500px beyond the start
+          scrub: true,
+        },
+      });
+      tlLines.from(splitLines.lines, {
+        duration: 1,
+        y: 100,
+        autoAlpha: 0,
+        stagger: 0.05,
+      });
+    },
+    { scope: scope }
+  );
 
   return (
     <>
-      <main className="flex flex-col items-center gap-20" ref={scope}>
-        <section className="flex w-full max-w-7xl justify-start items-center flex-col lg:flex-row lg:gap-12 min-h-[80vh]">
+      <main className="flex flex-col items-center gap-20">
+        <section
+          className="flex w-full max-w-7xl justify-start items-center flex-col lg:flex-row lg:gap-12 min-h-[80vh]"
+          ref={heroAnimScope}
+        >
           <div className="mt-24 lg:mt-8 mx-2 px-2">
             <div className="flex flex-col gap-6 text-center lg:text-start">
-              <span className="text-5xl overflow-hidden lg:text-7xl font-light palt break-keep" ref={heroMainText}>
-
-              </span>
+              <span
+                id="hero-main-typo"
+                className="text-5xl overflow-hidden lg:text-7xl font-light palt break-keep w-fit border-r-8 border-red-500"
+              ></span>
               <span className="break-keep font-mono">
                 Realise Your Vision in Waseda with{" "}
                 <span className="bg-linear-to-r from-cyan-500 to-blue-500 to-text-gradient">
@@ -60,22 +108,37 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect">
+        <section
+          className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect"
+          ref={scope}
+        >
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
               {/* アプリチームについて */}
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
-                <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
-                  <h2 className="text-5xl font-light w-full divide-effect">
-                    <p className="font-mono text-sm opacity-60 px-1">About(us);</p>
-                    アプリチームについて
+                <section className="gsap-trigger border-t border-b border-white/10 w-full max-w-7xl py-32">
+                  <h2 className="overflow-hidden text-5xl font-light w-full divide-effect">
+                    <p className="font-mono text-sm opacity-60 px-1">
+                      About(us);
+                    </p>
+                    <div className="gsap gsap-chars">アプリチームについて</div>
                   </h2>
-                  <p className="text-md text-foreground py-8 divide-effect">
-                    アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                    <br />
-                    私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
-                  </p>
+                  <div className="overflow-hidden text-lg text-foreground my-8 divide-effect">
+                    <div className="gsap gsap-lines">
+                      アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
+                      <br />
+                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                      <br />
+                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                      <br />
+                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                      <br />
+                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                      <br />
+                      私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    </div>
+                  </div>
                 </section>
               </div>
 
@@ -83,7 +146,9 @@ export default function Home() {
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
                   <h2 className="text-5xl font-light w-full divide-effect">
-                    <p className="font-mono text-sm opacity-60 px-1">Activities.that(we.do);</p>
+                    <p className="font-mono text-sm opacity-60 px-1">
+                      Activities.that(we.do);
+                    </p>
                     主な活動内容
                   </h2>
                   <p className="text-md text-foreground py-8 divide-effect">
@@ -97,8 +162,9 @@ export default function Home() {
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
                   <h2 className="text-5xl font-light w-full divide-effect">
-                    <p className="font-mono text-sm opacity-60 px-1">About(us);</p>
-
+                    <p className="font-mono text-sm opacity-60 px-1">
+                      About(us);
+                    </p>
                   </h2>
                   <p className="text-md text-foreground py-8 divide-effect">
                     私たちの活動は、アプリケーション開発だけでなく、技術勉強会やイベントの開催など多岐にわたります。
@@ -112,7 +178,9 @@ export default function Home() {
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
                   <h2 className="text-5xl font-light w-full divide-effect">
-                    <p className="font-mono text-sm opacity-60 px-1">Projects;</p>
+                    <p className="font-mono text-sm opacity-60 px-1">
+                      Projects;
+                    </p>
                     プロジェクト紹介
                   </h2>
                   <p className="text-md text-foreground py-8 divide-effect">
@@ -127,7 +195,9 @@ export default function Home() {
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
                   <h2 className="text-5xl font-light w-full divide-effect">
-                    <p className="font-mono text-sm opacity-60 px-1">Newcomers;</p>
+                    <p className="font-mono text-sm opacity-60 px-1">
+                      Newcomers;
+                    </p>
                     新歓情報
                   </h2>
                   <p className="text-md text-foreground py-8 divide-effect">
