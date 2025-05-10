@@ -2,8 +2,10 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import ProjectSection from "@/components/projects/ProjectSection";
 import Script from "next/script";
+import PageSteper from "@/components/projects/detail/PageSteper";
+import ProjectDetailContainer from "@/components/projects/detail/ProjectDetailContainer";
 
-export default function Home() {
+export default function ProjectDetail() {
   return (
     <>
     <div>
@@ -31,16 +33,14 @@ export default function Home() {
             });`}
         </Script>
       </div>    
-      <main className="flex flex-col items-center gap-20">
-        <section className="flex w-full max-w-7xl justify-center items-center flex-col lg:flex-row lg:gap-12">
-          <div className="mt-24 lg:mt-8 mx-2 px-2">
-            <div className="flex flex-col gap-6 text-center lg:text-start">
-              <span className="text-4-5xl  lg:text-6xl font-semibold palt">
-                プロジェクト
-              </span>
-              <ProjectSection sectionName="進行中のプロジェクト" />
-              <ProjectSection sectionName="過去のプロジェクト" />
-            </div>
+      <main className="flex flex-col gap-20">
+        <PageSteper />
+        <section className="flex w-full justify-center items-center flex-col gap-12 px-4">
+          <div className="flex flex-col max-w-7xl gap-6">
+            <span className="text-2xl font-semibold palt">
+              天文同好会WAXA Webサイト制作
+            </span>
+            <ProjectDetailContainer />
           </div>
         </section>
       </main>
