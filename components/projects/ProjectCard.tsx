@@ -3,7 +3,7 @@
 
 export const ProjectCard = ({ title, description, image, link }: { title: string, description: string, image: string, link: string }) => {
     return (
-        <div className="min-w-[150px] max-w-xs mt-4 lg:min-w-[360px] lg:max-w-sm rounded-2xl border border-gray-600 bg-transparent shadow-lg overflow-hidden">
+        <div className="max-w-xs mt-4 w-full lg:max-w-sm rounded-2xl border border-gray-600 bg-transparent shadow-lg overflow-hidden">
             <a href={link} className="inline-block text-blue-300 font-medium">
                 <img src={image} alt={title} className="w-full h-40 object-cover" />
                 <div className="p-4">
