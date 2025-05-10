@@ -17,7 +17,7 @@
     font-feature-settings: "palt";
   }
 
-  .to-text-gradient-child > * {
+  .to-text-gradient-child * {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
