@@ -75,13 +75,13 @@ export default function Header() {
           </div>
         </div>
         <div className="flex w-full max-w-7xl gap-3 top-0 justify-between py-4 z-30 relative">
-          <Link href="/">
+          <Link href="/" className="flex items-center">
             <Image
               src="/app-team-logo.svg"
-              width={96}
-              height={28}
+              width={196}
+              height={24}
               alt="WINCアプリチーム"
-              className="h-6 lg:h-9"
+              className="filter-invert object-cover"
             />
           </Link>
           {isOpen ?
