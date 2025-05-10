@@ -1,16 +1,45 @@
 "use client";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import TextPlugin from "gsap/TextPlugin";
+import { useGSAP } from "@gsap/react";
 
 export default function Home() {
+  gsap.registerPlugin(TextPlugin);
+  const heroMainText = useRef(null);
+  const scope = useRef(null);
+
+  useEffect(() => {
+
+    gsap.to(heroMainText.current, {
+      autoAlpha: 1,
+      text: "アプリで、世界を変えよう。",
+      duration: 2,
+    });
+  }, []);
+
+  useGSAP(() => {
+    gsap.to('.divide-effect', {
+      delay: 0.2,
+      duration: 0.5,
+      ease: "power2.out", //型がリテラル型なので注意
+      stagger: 0.05,
+      y: 0,
+    });
+
+  }, { scope: scope });
+
+
   return (
     <>
-      <main className="flex flex-col items-center gap-20">
+      <main className="flex flex-col items-center gap-20" ref={scope}>
         <section className="flex w-full max-w-7xl justify-start items-center flex-col lg:flex-row lg:gap-12 min-h-[80vh]">
           <div className="mt-24 lg:mt-8 mx-2 px-2">
             <div className="flex flex-col gap-6 text-center lg:text-start">
-              <span className="text-5xl  lg:text-7xl font-light palt break-keep">
-                アプリで、世界を変えよう。
+              <span className="text-5xl overflow-hidden lg:text-7xl font-light palt break-keep" ref={heroMainText}>
+
               </span>
               <span className="break-keep font-mono">
                 Realise Your Vision in Waseda with{" "}
@@ -50,7 +79,7 @@ export default function Home() {
                 </section>
               </div>
 
-               {/* 主な活動内容 */}
+              {/* 主な活動内容 */}
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
                   <h2 className="text-5xl font-light w-full divide-effect">
@@ -69,7 +98,7 @@ export default function Home() {
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-32">
                   <h2 className="text-5xl font-light w-full divide-effect">
                     <p className="font-mono text-sm opacity-60 px-1">About(us);</p>
-                    アプリチームについて
+
                   </h2>
                   <p className="text-md text-foreground py-8 divide-effect">
                     私たちの活動は、アプリケーション開発だけでなく、技術勉強会やイベントの開催など多岐にわたります。
@@ -92,7 +121,7 @@ export default function Home() {
                     各プロジェクトの詳細は、以下のリンクからご覧いただけます。
                   </p>
                 </section>
-              </div>     
+              </div>
 
               {/* 新歓情報 */}
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
@@ -107,7 +136,7 @@ export default function Home() {
                     参加希望の方は、以下のリンクから詳細をご確認ください。
                   </p>
                 </section>
-              </div>   
+              </div>
 
               {/* ニュース */}
               <div className="h-[80vh] divide-effect flex flex-col justify-center">
@@ -122,9 +151,9 @@ export default function Home() {
                     各ニュースの詳細は、以下のリンクからご覧いただけます。
                   </p>
                 </section>
-              </div> 
-              
-                   {/* 締めの文章 */}
+              </div>
+
+              {/* 締めの文章 */}
               <section className="w-full max-w-7xl p-8 flex flex-col gap-4">
                 <p className="text-md text-foreground text-center">
                   アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
