@@ -1,6 +1,4 @@
 "use client";
-import { Plus } from "lucide-react";
-import Link from "next/link";
 import { useRef } from "react";
 import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
@@ -87,8 +85,8 @@ export default function Activities() {
         </h2>
         <div>
           <div className="divide-effect">
-            <div className="flex flex-col lg:flex-row max-w-7xl">
-              <article className="bg-foreground/10 border border-white/10 grow">
+            <div className="lg:grid lg:grid-cols-15 max-w-7xl">
+              <article className="lg:col-span-9 bg-foreground/10 border border-white/10">
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/coding-icon.svg"
@@ -97,18 +95,18 @@ export default function Activities() {
                     width={384}
                     height={384}
                   />
-                  <h3 className="text-3xl pt-8 font-light w-full gsap-lines">
+                  <h3 className="text-3xl pt-8 font-light gsap-lines">
                     <p className="font-mono text-sm opacity-60">Coding</p>
                     コーディング
                   </h3>
                   <p className="text-md py-4 gsap-lines">
-                    アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                    <br />
-                    私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    3~5人のチームで、実際の開発現場で使用される手法を用いて、最新技術によるアプリ開発を進めます。<br />
+                    用件定義、設計、実装、テスト、リリースの各工程を、ウォーターフォール開発またはアジャイル開発で進行します。<br />
+                    ネイティブアプリ開発ではFlutter、ウェブアプリ開発では主にNext.jsを使用しています。
                   </p>
                 </div>
               </article>
-              <article className="bg-foreground/10 border border-white/10 grow">
+              <article className="lg:col-span-6 bg-foreground/10 border border-white/10">
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/code-review-icon.svg"
@@ -117,24 +115,19 @@ export default function Activities() {
                     width={384}
                     height={384}
                   />
-                  <h3 className="text-3xl pt-8 font-light w-full gsap-lines">
+                  <h3 className="text-3xl pt-8 font-light gsap-lines">
                     <p className="font-mono text-sm opacity-60">
                       Code Reviewing
                     </p>
                     コードレビュー
                   </h3>
                   <p className="text-md py-4 gsap-lines">
-                    アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                    <br />
-                    私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    書籍の情報やインターンでの実務で得た経験をもとに、コードの可読性や保守性を考慮し、より良いコードを書くためのアドバイスを行います。<br />
+                    レビューを受けることで、他のメンバーの考え方や技術を学ぶことができるのは、個人開発では得られないメリットです。
                   </p>
                 </div>
               </article>
-            </div>
-          </div>
-          <div className="divide-effect">
-            <div className="flex flex-col lg:flex-row max-w-7xl">
-              <article className="bg-foreground/10 border border-white/10 grow">
+              <article className="lg:col-span-5 bg-foreground/10 border border-white/10 grow">
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/idea-icon.svg"
@@ -150,13 +143,12 @@ export default function Activities() {
                     アイデア出し
                   </h3>
                   <p className="text-md py-4 gsap-lines">
-                    アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                    <br />
-                    私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    アプリ開発とウェブ制作の一番の違いは、提供するものがサービスだということ。<br />
+                    ミニビジコンのような形でアイデアを出し合い、検討します。<br />
                   </p>
                 </div>
               </article>
-              <article className="bg-foreground/10 border border-white/10 grow">
+              <article className="lg:col-span-6 bg-foreground/10 border border-white/10 grow">
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/definition-icon.svg"
@@ -172,13 +164,13 @@ export default function Activities() {
                     要件定義
                   </h3>
                   <p className="text-md py-4 gsap-lines">
-                    アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                    <br />
-                    私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    チームでの計画的なアプリ開発に欠かせないのが要件定義。<br />
+                    これから制作するアプリは、どんな人に、どんな価値を提供するのか。どんな機能を実装するのか。<br />
+                    最低限の機能を実装するMVPを考え、開発の指針とします。<br />
                   </p>
                 </div>
               </article>
-              <article className="bg-foreground/10 border border-white/10 grow">
+              <article className="lg:col-span-4 bg-foreground/10 border border-white/10 grow">
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/marketing-icon.svg"
@@ -194,9 +186,8 @@ export default function Activities() {
                     運営
                   </h3>
                   <p className="text-md py-4 gsap-lines">
-                    アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                    <br />
-                    私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
+                    作ったらおわりではないのがアプリ開発。<br />
+                    保守やマネタイズなど、継続的な価値提供のために知恵を絞り尽くします。<br />
                   </p>
                 </div>
               </article>
