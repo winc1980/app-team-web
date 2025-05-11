@@ -90,7 +90,7 @@ export default function Activities() {
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/coding-icon.svg"
-                    alt="プロジェクト1の説明"
+                    alt="コーディング"
                     className="w-fit h-40 object-contain reveal-on-scroll opacity-50"
                     width={384}
                     height={384}
@@ -110,7 +110,7 @@ export default function Activities() {
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/code-review-icon.svg"
-                    alt="プロジェクト1の説明"
+                    alt="コードレビュー"
                     className="w-fit h-40 object-contain reveal-on-scroll opacity-50"
                     width={384}
                     height={384}
@@ -131,7 +131,7 @@ export default function Activities() {
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/idea-icon.svg"
-                    alt="プロジェクト1の説明"
+                    alt="アイデア出し"
                     className="w-fit h-40 object-contain reveal-on-scroll opacity-50"
                     width={384}
                     height={384}
@@ -152,7 +152,7 @@ export default function Activities() {
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/definition-icon.svg"
-                    alt="プロジェクト1の説明"
+                    alt="要件定義"
                     className="w-fit h-40 object-contain reveal-on-scroll opacity-50"
                     width={384}
                     height={384}
@@ -174,7 +174,7 @@ export default function Activities() {
                 <div className="bg-background rounded-2xl p-4 m-2">
                   <Image
                     src="/icons/marketing-icon.svg"
-                    alt="プロジェクト1の説明"
+                    alt="運営"
                     className="w-fit h-40 object-contain reveal-on-scroll opacity-50"
                     width={384}
                     height={384}

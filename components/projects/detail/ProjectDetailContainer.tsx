@@ -12,7 +12,7 @@ export default function ProjectDetailContainer({ project }: ProjectDetailContain
     return (
         <div className="flex flex-col w-full max-w-lg justify-center">
             {/* 画像 */}
-            <Image src={project.images[0].url ?? ""} alt="Project Detail" width={150} height={150} />
+            <Image src={project.images[0].url ?? ""} alt={project.title} width={150} height={150} />
 
             {/* 概要 */}
             <Overview project={project} />
