@@ -7,11 +7,11 @@ import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/all";
-import Image from "next/image";
 import News from "@/components/index/news";
 import Projects from "@/components/index/projects";
 import Join from "@/components/index/join";
 import Activities from "@/components/index/activities";
+import Message from "@/components/index/message";
 
 export default function Home() {
   gsap.registerPlugin(TextPlugin);
@@ -213,22 +213,11 @@ export default function Home() {
                   </svg>
                 </section>
               </div>
-              <Activities/>
-
-              <Projects/>
-
-              <Join/>
-
-              <News/>
-
-              {/* 締めの文章 */}
-              <section className="w-full max-w-7xl p-8 flex flex-col gap-4">
-                <p className="text-md text-foreground text-center">
-                  アプリチームは、早稲田大学の学生団体であり、アプリケーション開発を通じて技術力を高めることを目的としています。
-                  <br />
-                  私たちは、学生同士の交流や技術の共有を大切にし、より良いアプリケーションを作るために日々努力しています。
-                </p>
-              </section>
+              <Activities />
+              <Projects />
+              <Join />
+              <News />
+              <Message />
             </div>
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
           </div>
