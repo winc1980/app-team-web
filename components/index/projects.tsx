@@ -85,7 +85,7 @@ export default function Projects() {
                 <div className="bg-background hover:bg-foreground hover:text-background rounded-2xl p-4 m-2">
                   <Image
                     src="/test-images/project-image.png"
-                    alt="プロジェクト1の説明"
+                    alt="プロジェクト1のアイコン"
                     className="w-full h-40 object-cover reveal-on-scroll"
                     width={384}
                     height={384}
@@ -109,7 +109,7 @@ export default function Projects() {
                 <div className="bg-background hover:bg-foreground hover:text-background rounded-2xl p-4 m-2">
                   <Image
                     src="/test-images/project-image.png"
-                    alt="プロジェクト1の説明"
+                    alt="プロジェクト2のアイコン"
                     className="w-full h-40 object-cover reveal-on-scroll"
                     width={384}
                     height={384}
@@ -133,7 +133,7 @@ export default function Projects() {
                 <div className="bg-background hover:bg-foreground hover:text-background rounded-2xl p-4 m-2">
                   <Image
                     src="/test-images/project-image.png"
-                    alt="プロジェクト1の説明"
+                    alt="プロジェクト3のアイコン"
                     className="w-full h-40 object-cover reveal-on-scroll"
                     width={384}
                     height={384}
