@@ -6,13 +6,13 @@ export default function Footer() {
     <footer className="flex flex-col justify-center items-center px-4 py-8 gap-8 bg-gradient-to-b from-transparent to-black">
       <section
         className="flex items-center
-          gap-8 justify-between w-full max-w-7xl mt-16 px-3"
+          gap-8 justify-between w-full max-w-7xl mt-16 pr-3"
       >
         <Link href="">
           <Image
-            src="/app-team-logo.svg"
-            width={196}
-            height={36}
+            src="/app-team-logo-white.svg"
+            width={280}
+            height={48}
             alt="WINC: アプリチーム"
           />
         </Link>
