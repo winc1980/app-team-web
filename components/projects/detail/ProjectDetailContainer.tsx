@@ -2,20 +2,26 @@ import Image from "next/image"
 import UsedTechnologySection from "./technology/UsedTechnologySection"
 import Overview from "./overview/Overview"
 import ContributorsSection from "./contributors/ContributorsSection"
-export default function ProjectDetailContainer() {
+import { ProjectType } from "@/types/Project";
+
+interface ProjectDetailContainerProps {
+    project: ProjectType;
+}
+
+export default function ProjectDetailContainer({ project }: ProjectDetailContainerProps) {
     return (
         <div className="flex flex-col w-full max-w-lg justify-center">
             {/* 画像 */}
-            <img src="/test-images/projects/image.png" alt="Project Detail" className="w-full h-full" />
+            <Image src={project.images[0].url ?? ""} alt="Project Detail" width={150} height={150} />
 
             {/* 概要 */}
-            <Overview />
+            <Overview project={project} />
 
             {/* 使用技術 */}
-            <UsedTechnologySection />
+            <UsedTechnologySection project={project} />
 
             {/* 貢献者 */}
-            <ContributorsSection />
+            <ContributorsSection project={project} />
         </div>
     )
 }
