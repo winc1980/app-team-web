@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight, Plus } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import gsap from "gsap";
@@ -71,7 +71,7 @@ export default function Join() {
   return (
     <div className="divide-effect flex flex-col" ref={scope}>
       <section className="gsap-trigger border-t border-b border-white/10 w-full max-w-7xl py-32 relative">
-        <h2 className="overflow-hidden text-7xl font-light w-full divide-effect">
+        <h2 className="overflow-hidden text-5xl lg:text-7xl font-light w-full divide-effect">
           <p className="font-mono text-sm opacity-60 px-1">About(us);</p>
           <p className="text-4xl/16 font-light gasp-lines">新歓情報</p>
           <div className="gsap gsap-chars ">
@@ -79,19 +79,21 @@ export default function Join() {
             <span className="to-text-gradient-child **:bg-linear-to-r **:from-rose-600 **:to-fuchsia-600">
               =
             </span>{" "}
-            <span className="to-text-gradient-child **:bg-linear-to-r **:from-yellow-400 **:to-orange-400">
-              new
-            </span>{" "}
-            Member
-            <span className="to-text-gradient-child **:bg-linear-to-b **:from-cyan-600 **:to-indigo-600">
-              ()
-            </span>
-            ;
+            <p className="lg:inline">
+              <span className="to-text-gradient-child **:bg-linear-to-r **:from-yellow-400 **:to-orange-400">
+                new
+              </span>{" "}
+              Member
+              <span className="to-text-gradient-child **:bg-linear-to-b **:from-cyan-600 **:to-indigo-600">
+                ()
+              </span>
+              ;
+            </p>
           </div>
         </h2>
         <div className="overflow-hidden text-lg text-foreground my-8 divide-effect">
-          <div className="gsap gsap-lines text-base/12">
-            <p className="text-4xl/16 font-light">
+          <div className="gsap gsap-lines text-sm/8 lg:text-base/12">
+            <p className="text-3xl/12 lg:text-4xl/16 font-light">
               今年度の新入生向け企画は終了しました。
             </p>
             サークルへの参加は常時受け入れております。
