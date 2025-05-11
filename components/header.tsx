@@ -74,7 +74,7 @@ export default function Header() {
             </footer>
           </div>
         </div>
-        <div className="flex w-full max-w-7xl gap-3 top-0 justify-between py-4 z-30 relative">
+        <div className="flex w-full justify-between items-center gap-3 max-w-7xl top-0 py-4 z-30 relative">
           <Link href="/" className="flex items-center">
             <Image
               src="/app-team-logo.svg"

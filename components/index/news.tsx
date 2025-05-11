@@ -13,7 +13,7 @@ export default function News() {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(SplitText);
   const scope = useRef(null);
-  
+
   useGSAP(
     () => {
       const splitChars = SplitText.create(".gsap-chars", { type: "chars" });
@@ -71,7 +71,7 @@ export default function News() {
   return (
     <div className="divide-effect flex flex-col justify-center" ref={scope}>
       <section className="border-t border-b border-white/10 w-full max-w-7xl py-32 flex flex-col gap-20">
-        <h2 className="text-5xl font-light w-full divide-effect gsap-chars">
+        <h2 className="text-4xl lg:text-5xl font-light w-full divide-effect gsap-chars">
           <p className="font-mono text-sm opacity-60 px-1">News;</p>
           ニュース
         </h2>

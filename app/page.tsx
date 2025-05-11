@@ -102,11 +102,11 @@ export default function Home() {
     <>
       <main className="flex flex-col items-center gap-20">
         <section
-          className="flex w-full max-w-7xl justify-start items-center flex-col lg:flex-row lg:gap-12 min-h-[80vh]"
+          className="flex flex-col w-full max-w-7xl justify-stretch lg:justify-center items-center lg:items-start lg:gap-12 min-h-[80vh]"
           ref={heroAnimScope}
         >
-          <div className="mt-24 lg:mt-8 mx-2 px-2">
-            <div className="flex flex-col gap-6 text-center lg:text-start">
+          <div className="mt-24 lg:mt-8 mx-2 px-2 flex flex-col grow lg:grow-0">
+            <div className="flex flex-col gap-6 text-center justify-center lg:text-start grow">
               <span
                 id="hero-main-typo"
                 className="text-5xl overflow-hidden lg:text-7xl font-light palt break-keep w-fit border-r-8 border-red-500"
@@ -119,7 +119,7 @@ export default function Home() {
                 .
               </span>
             </div>
-            <div className="flex flex-wrap gap-4 my-6  justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-4 my-6 justify-start">
               <Link href="https://secure.register.winc.ne.jp/">
                 <div className="flex gap-1  hover:gap-3  p-4 rounded-2xl duration-300 button-slider from-purple-500 to-purple-500">
                   新入生向け情報
@@ -131,37 +131,39 @@ export default function Home() {
         </section>
 
         <section
-          className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect"
+          className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect px-4 lg:px-0"
           ref={scope}
         >
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
               {/* アプリチームについて */}
-              <div className="h-[80vh] divide-effect flex flex-col justify-center">
+              <div className="divide-effect flex flex-col justify-center">
                 <section className="gsap-trigger border-t border-b border-white/10 w-full max-w-7xl py-32 relative">
-                  <h2 className="overflow-hidden text-7xl font-light w-full divide-effect">
+                  <h2 className="overflow-hidden text-5xl lg:text-7xl font-light w-full divide-effect">
                     <p className="font-mono text-sm opacity-60 px-1">
                       About(us);
                     </p>
-                    <div className="gsap gsap-chars ">
+                    <div className="gsap gsap-chars">
                       code{" "}
                       <span className="to-text-gradient-child *:bg-linear-to-r *:from-rose-600 *:to-fuchsia-600">
                         =
                       </span>{" "}
-                      <span className="to-text-gradient-child *:bg-linear-to-r *:from-yellow-400 *:to-orange-400">
-                        new
-                      </span>{" "}
-                      Vision
-                      <span className="to-text-gradient-child *:bg-linear-to-b *:from-cyan-600 *:to-indigo-600">
-                        ()
-                      </span>
-                      ;
+                      <p className="lg:inline">
+                        <span className="to-text-gradient-child *:bg-linear-to-r *:from-yellow-400 *:to-orange-400">
+                          new
+                        </span>{" "}
+                        Vision
+                        <span className="to-text-gradient-child *:bg-linear-to-b *:from-cyan-600 *:to-indigo-600">
+                          ()
+                        </span>
+                        ;
+                      </p>
                     </div>
                   </h2>
                   <div className="overflow-hidden text-lg text-foreground my-8 divide-effect">
-                    <div className="gsap gsap-lines text-base/12">
-                      <p className="text-4xl/16 font-light">
+                    <div className="gsap gsap-lines text-sm/8 lg:text-base/12">
+                      <p className="text-4xl/16 font-light break-keep">
                         コードを書いて、未来をえがく。
                       </p>
                       アプリチームでは起業やビジネス創出を目標として最先端技術を用いたアプリ開発を行います。
