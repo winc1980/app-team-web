@@ -4,8 +4,23 @@ import ProjectSection from "@/components/projects/ProjectSection";
 import Script from "next/script";
 import PageSteper from "@/components/projects/detail/PageSteper";
 import ProjectDetailContainer from "@/components/projects/detail/ProjectDetailContainer";
+import { client } from "@/libs/microcms";
+import { ProjectType } from "@/types/Project";
 
-export default function ProjectDetail() {
+async function getProject(id: string): Promise<ProjectType> {
+  const data = await client.get({
+    endpoint: `projects`,
+    contentId: id,
+  });
+  return data;
+};
+
+export default async function ProjectDetail({ params }: { params: { id: string } }) {
+  const id = params.id as string;
+  const project = await getProject(id);
+
+  console.log(project);
+
   return (
     <>
     <div>
@@ -40,7 +55,7 @@ export default function ProjectDetail() {
             <span className="text-2xl font-semibold palt">
               天文同好会WAXA Webサイト制作
             </span>
-            <ProjectDetailContainer />
+            <ProjectDetailContainer project={project} />
           </div>
         </section>
       </main>

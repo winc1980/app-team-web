@@ -11,7 +11,7 @@ export default function MemberCell({ line, member }: MemberCellProps) {
   return (
     <div className="flex flex-col gap-2 items-start w-full">
         <div className="flex items-center gap-6">
-            <Icon image={member.icon} />
+            <Icon image={member.icon} name={member.name} />
             <div className="flex flex-col items-start gap-1">
                 <h3 className="font-semibold text-lg">
                     {member.name}
@@ -36,10 +36,10 @@ export default function MemberCell({ line, member }: MemberCellProps) {
             {/* github and SNS URL */}
             <div className="flex items-center gap-4">
                 <a href={member.githubUrl} className="text-sm" target="_blank" rel="noopener noreferrer">
-                    <Image src="/external-assets/github-logo/github-mark-white.png" alt="github-icon" width={32} height={32} />
+                    <Image src="/external-assets/github-logo/github-mark-white.png" alt="githubのアイコン" width={32} height={32} />
                 </a>
                 <a href={member.instagramUrl} className="text-sm" target="_blank" rel="noopener noreferrer">
-                    <Image src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.png" alt="instagram-icon" width={30} height={30} />
+                    <Image src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.png" alt="instagramのアイコン" width={30} height={30} />
                 </a>
             </div>
             
