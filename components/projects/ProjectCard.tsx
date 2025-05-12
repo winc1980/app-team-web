@@ -1,26 +1,33 @@
 import { ProjectType } from "@/types/Project";
 import Image from "next/image";
+import Link from "next/link";
 
-interface ProjectCardProps {
-    project: ProjectType;
-}
-
-export const ProjectCard = ({ project }: ProjectCardProps) => {
-    console.log(project.images);
-
-    return (
-        <div className="max-w-xs mt-4 w-full lg:max-w-sm rounded-2xl border border-gray-600 bg-transparent shadow-lg overflow-hidden">
-            <a href={`/projects/${project.id}`} className="inline-block text-blue-300 font-medium">
-                <Image src={project.images[0].url ?? ""} alt={project.title} className="w-full h-40 object-cover" width={100} height={100} />
-                <div className="p-4">
-                    <h2 className="text-xl no-underline font-semibold mb-2 text-white">{project.title}</h2>
-                    <p className="text-sm no-underline text-white">{project.description}</p>
-                    <span className="mt-4 inline-block text-blue-300 hover:underline font-semibold text-sm">
-                        詳しく見る →
-                    </span>
-                </div>
-            </a>
+export const ProjectCard = ({ project,className }: { project: ProjectType,className?:string }) => {
+  return (
+    <Link href={`/projects/${project.id}`} className={className}>
+      <article className="bg-foreground/10 border border-white/10 w-full @container p-2 h-full">
+        <div className="flex flex-col @lg:flex-row items-center bg-background hover:bg-foreground/80 hover:backdrop-blur hover:text-background @lg:hover:[&>img]:h-96 transition-color duration-300 rounded-2xl gap-4 @xl:gap-8 p-4 @lg:p-8 h-full">
+          <Image
+            src={project.images[0].url ?? ""}
+            alt={project.title}
+            className="h-80 w-full @lg:max-w-1/2 max-w-lg object-cover transition-all duration-300 reveal-on-scroll rounded-xl"
+            width={320}
+            height={320}
+          />
+          <div className="@lg:w-1/2">
+            <h3 className="text-3xl font-light gsap-lines">
+              <p className="font-mono text-sm opacity-60">
+                {project.completeDate != null ? "Released" : "In development"}
+                {" / "}
+                {/* project.technologies[0][1] */
+                /* これどういう仕様なんだ */}
+              </p>
+              {project.title}
+            </h3>
+            <p className="text-md py-4 gsap-lines">{project.description}</p>
+          </div>
         </div>
-
-      );
+      </article>
+    </Link>
+  );
 };
