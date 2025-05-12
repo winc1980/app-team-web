@@ -41,7 +41,7 @@ export default function Home() {
                   <h2 className="text-5xl font-light w-full divide-effect">
                     <div className="pl-8 flex flex-col items-start gap-2">
                       <p className="font-mono text-sm opacity-60 px-1">Our.projects();</p>
-                      プロダクト
+                      プロジェクト
                     </div>
                   </h2>
                 </section>
@@ -55,8 +55,7 @@ export default function Home() {
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
               <div className="min-h-[80vh] divide-effect flex flex-col justify-start">
-                <ProjectSection sectionName="進行中のプロジェクト" />
-                <ProjectSection sectionName="過去のプロジェクト" />
+                <ProjectSection />
               </div>
             </div>
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
