@@ -1,43 +1,33 @@
 import { ProjectType } from "@/types/Project";
 import Image from "next/image";
+import Link from "next/link";
 
-interface ProjectCardProps {
-    project: ProjectType;
-}
-
-export const ProjectCard = ({ project }: ProjectCardProps) => {
-    console.log(project.images);
-
-    return (
-        <a href={`/projects/${project.id}`} className="w-full flex flex-col md:flex-row font-medium p-4 border border-gray-600 bg-transparent shadow-lg">
-            <div className="md:hidden">
-                <h2 className="text-xl no-underline font-semibold mb-2 text-white">{project.title}</h2>
-            </div>
-
-            <Image src={project.images[0].url ?? ""} className="px-2" alt={project.title} width={150} height={150} />
-            <Image src={project.images[1].url ?? ""} className="px-2" alt={project.title} width={150} height={150} />
-
-            <div className="flex flex-col justify-between items-between px-6 md:block hidden">
-                <div className="flex flex-col gap-16">
-                    <h2 className="text-xl no-underline font-semibold mb-2 text-white">{project.title}</h2>
-                    <p className="text-sm no-underline text-white">{project.description}</p>
-                </div>
-                <div className="flex flex-row justify-end"> 
-                    <span className="mt-4 inline-block text-white-300 hover:underline font-semibold">
-                        MORE →
-                    </span>
-                </div>
-            </div>
-            <div className="flex flex-col justify-between md:hidden mt-4">  
-                <div className="flex flex-col gap-16">
-                    <p className="text-sm no-underline text-white">{project.description}</p>
-                </div>
-                <div className="flex flex-row justify-end mt-4"> 
-                    <span className="inline-block text-white-300 hover:underline font-semibold text-sm">
-                        MORE →
-                    </span>
-                </div>
-            </div>
-        </a>
-      );
+export const ProjectCard = ({ project, className }: { project: ProjectType, className?: string }) => {
+  return (
+    <Link href={`/projects/${project.id}`} className={className}>
+      <article className="bg-foreground/10 border border-white/10 w-full @container p-2 h-full">
+        <div className="flex flex-col @lg:flex-row items-center bg-background hover:bg-foreground/80 hover:backdrop-blur hover:text-background @lg:hover:[&>img]:h-96 transition-color duration-300 rounded-2xl gap-4 @xl:gap-8 p-4 @lg:p-8 h-full">
+          <Image
+            src={project.images[0].url ?? ""}
+            alt={project.title}
+            className="h-80 w-full @lg:max-w-1/2 max-w-lg object-cover transition-all duration-300 reveal-on-scroll rounded-xl"
+            width={320}
+            height={320}
+          />
+          <div className="@lg:w-1/2">
+            <h3 className="text-3xl font-light gsap-lines">
+              <p className="font-mono text-sm opacity-60">
+                {project.completeDate != null ? "Released" : "In development"}
+                {" / "}
+                {/* project.technologies[0][1] */
+                /* これどういう仕様なんだ */}
+              </p>
+              {project.title}
+            </h3>
+            <p className="text-md py-4 gsap-lines">{project.description}</p>
+          </div>
+        </div>
+      </article>
+    </Link>
+  );
 };
