@@ -16,7 +16,7 @@ export default async function News() {
   return (
     <>
       <main className="flex flex-col items-center">
-      <section className="w-full flex flex-col items-center">
+        <section className="w-full flex flex-col items-center">
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
@@ -37,15 +37,15 @@ export default async function News() {
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
           </div>
         </section>
-        <section className="w-full flex flex-col items-center">
+        <section className="w-full flex flex-col items-center backdrop-blur backdrop-saturate-200 backdrop-brightness-200 divide-effect">
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
               <div className="min-h-[80vh] flex flex-col justify-start">
                 {news.map((newsContent: NewsType) => (
-                    <article key={newsContent.id} className="bg-gray-900 mb-8 w-full max-w-7xl">
-                      <div className="bg-background rounded-2xl p-4 m-2">
-                        <h3 className="text-3xl font-light w-full">
+                  <article key={newsContent.id} className="bg-foreground/10 mb-8 w-full max-w-7xl">
+                    <div className="bg-background rounded-2xl p-4 m-2">
+                      <h3 className="text-3xl font-light w-full divide-effect">
                         <p className="font-mono text-sm opacity-60 px-1">{newsContent.createdAt}</p>
                         {newsContent.title}
                       </h3>
