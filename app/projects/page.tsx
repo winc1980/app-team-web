@@ -6,7 +6,7 @@ import Script from "next/script";
 export default function Home() {
   return (
     <>
-    <div>
+      <div>
         <div id="homepage-background" className="fixed h-screen w-screen -z-1"></div>
         <Script
           src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
@@ -30,11 +30,11 @@ export default function Home() {
               backgroundColor: 0x0
             });`}
         </Script>
-      </div>    
+      </div>
       <main className="flex flex-col items-center gap-20">
-      <section className="w-full flex flex-col items-center">
-        <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
-          <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
+        <section className="w-full flex flex-col items-center">
+          <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
               <div className="flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-8">
@@ -47,10 +47,10 @@ export default function Home() {
                 </section>
               </div>
             </div>
-          <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
-        </div>
-      </section>
-      <section className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect">
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
+          </div>
+        </section>
+        <section className="w-full flex flex-col items-center divide-effect">
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
         </section>
 
-      {/* <section className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect">
+        {/* <section className="w-full flex flex-col items-center divide-effect">
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10">
               <div className="mt-24 lg:mt-8 mx-2 px-2">

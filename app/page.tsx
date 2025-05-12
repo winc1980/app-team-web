@@ -131,7 +131,7 @@ export default function Home() {
         </section>
 
         <section
-          className="backdrop-blur backdrop-saturate-200 backdrop-brightness-200 w-full flex flex-col items-center divide-effect px-4 lg:px-0"
+          className="w-full flex flex-col items-center divide-effect px-4 lg:px-0"
           ref={scope}
         >
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
