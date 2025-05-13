@@ -14,22 +14,6 @@ export default function Message() {
 
   useGSAP(
     () => {
-      const splitChars = SplitText.create(".gsap-chars", { type: "chars" });
-      const tlChars = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".gsap-chars",
-          start: "bottom bottom",
-          end: "+=90%", // end after scrolling 500px beyond the start
-          scrub: true,
-        },
-      });
-      tlChars.from(splitChars.chars, {
-        duration: 1,
-        y: 100,
-        autoAlpha: 0,
-        stagger: 0.05,
-      });
-
       const splitLines = SplitText.create(".gsap-lines", {
         type: "lines",
         mask: "lines",
@@ -47,20 +31,6 @@ export default function Message() {
         y: 100,
         autoAlpha: 0,
         stagger: 0.05,
-      });
-
-      const tlObjects = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".gsap-lines",
-          start: "top bottom",
-          end: "+=50%", // end after scrolling 500px beyond the start
-          scrub: true,
-        },
-      });
-      tlObjects.from(".reveal-on-scroll", {
-        duration: 1,
-        y: 100,
-        autoAlpha: 0,
       });
     },
     { scope: scope }

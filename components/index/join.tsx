@@ -51,20 +51,6 @@ export default function Join() {
         autoAlpha: 0,
         stagger: 0.05,
       });
-
-      const tlObjects = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".gsap-lines",
-          start: "top bottom",
-          end: "+=50%", // end after scrolling 500px beyond the start
-          scrub: true,
-        },
-      });
-      tlObjects.from(".reveal-on-scroll", {
-        duration: 1,
-        y: 100,
-        autoAlpha: 0,
-      });
     },
     { scope: scope }
   );

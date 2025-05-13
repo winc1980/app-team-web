@@ -40,7 +40,7 @@ export default function NewsArticle({
 
       const tlObjects = gsap.timeline({
         scrollTrigger: {
-          trigger: ".gsap-lines",
+          trigger: ".reveal-on-scroll",
           start: "top bottom",
           end: "+=50%", // end after scrolling 500px beyond the start
           scrub: true,
