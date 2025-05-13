@@ -6,6 +6,7 @@ import PageSteper from "@/components/projects/detail/PageSteper";
 import ProjectDetailContainer from "@/components/projects/detail/ProjectDetailContainer";
 import { client } from "@/libs/microcms";
 import { ProjectType } from "@/types/Project";
+import { parseTech } from "@/utils/cms/parseTech";
 
 async function getProject(id: string): Promise<ProjectType> {
   const data = await client.get({
@@ -13,9 +14,13 @@ async function getProject(id: string): Promise<ProjectType> {
     contentId: id,
   });
   return data;
-};
+}
 
-export default async function ProjectDetail({ params }: { params: { id: string } }) {
+export default async function ProjectDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
   const id = params.id as string;
   const project = await getProject(id);
 
@@ -23,43 +28,42 @@ export default async function ProjectDetail({ params }: { params: { id: string }
 
   return (
     <>
-    <div>
-        <div id="homepage-background" className="fixed h-screen w-screen -z-1"></div>
-        <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script
-          src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"
-          strategy="beforeInteractive"
-        />
-        <Script id="script">
-          {`VANTA.NET({
-              el: "#homepage-background",
-              mouseControls: true,
-              touchControls: true,
-              gyroControls: false,
-              minHeight: 200.00,
-              minWidth: 200.00,
-              scale: 1.00,
-              scaleMobile: 1.00,
-              color: 0x69ff,
-              backgroundColor: 0x0
-            });`}
-        </Script>
-      </div>    
-      <main className="flex flex-col gap-20">
-        <PageSteper />
-        <section className="flex w-full justify-center items-center flex-col gap-12 px-4">
-          <div className="flex flex-col max-w-7xl gap-6">
-            <span className="text-2xl font-semibold palt">
-              天文同好会WAXA Webサイト制作
-            </span>
+      <main className="flex flex-col items-center">
+        <section className="w-full flex flex-col items-center">
+          <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
+            <div className="w-full max-w-7xl">
+              <div className="flex flex-col justify-center">
+                <section className="border-t border-b border-white/10 w-full max-w-7xl py-8">
+                  <h2 className="text-3xl lg:text-5xl font-light w-full divide-effect">
+                    <div className="pl-8">
+                      <PageSteper pageTitle={project.title} className="my-4" />
+                      <p className="[&>span]:inline-block">
+                        <span>{project.title}</span>
+                        <span className="font-mono text-sm opacity-60 px-1">
+                          {project.completeDate != null
+                            ? "Released"
+                            : "In development"}
+                          {" / "}
+                          {parseTech(project.technologies)[0].name}
+                        </span>
+                      </p>
+                    </div>
+                  </h2>
+                </section>
+              </div>
+            </div>
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
+          </div>
+        </section>
+        <section className="w-full flex flex-col items-center divide-effect">
+          <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <ProjectDetailContainer project={project} />
+            <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
           </div>
         </section>
       </main>
-
     </>
   );
 }

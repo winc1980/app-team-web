@@ -121,3 +121,16 @@ body {
     Helvetica, sans-serif;
   overscroll-behavior: none;
 }
+/* カルーセル用 */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex-grow: 0;
+  flex-shrink: 0;
+  min-width: 0;
+  max-width: 100%;
+}

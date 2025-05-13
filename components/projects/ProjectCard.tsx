@@ -2,6 +2,7 @@
 import { ProjectType } from "@/types/Project";
 import Image from "next/image";
 import Link from "next/link";
+import { parseTech } from "@/utils/cms/parseTech";
 import { useRef } from "react";
 import gsap from "gsap";
 import TextPlugin from "gsap/TextPlugin";
@@ -10,6 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/all";
 
 export const ProjectCard = ({ project, className }: { project: ProjectType, className?: string }) => {
+  const techs = parseTech(project.technologies);
   gsap.registerPlugin(TextPlugin);
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(SplitText);
@@ -69,8 +71,7 @@ export const ProjectCard = ({ project, className }: { project: ProjectType, clas
               <p className="font-mono text-sm opacity-60">
                 {project.completeDate != null ? "Released" : "In development"}
                 {" / "}
-                {/* project.technologies[0][1] */
-                /* これどういう仕様なんだ */}
+                {techs[0].name}
               </p>
               <span className="gsap-lines">{project.title}</span>
             </h3>
