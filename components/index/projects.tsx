@@ -25,7 +25,7 @@ export default async function Projects() {
               <ProjectCard
                 key={project.id}
                 project={project}
-                className='grow min-w-sm'
+                className='grow min-w-[300]'
               />
             ))}
           </div>

@@ -70,9 +70,11 @@ export default function SectionHeading({
   );
 
   return (
-    <h2 ref={scope} className="text-4xl lg:text-5xl font-light w-full overflow-y-hidden divide-effect">
-      <p className="font-mono text-sm opacity-60 px-1 gsap-lines">{titleEn}</p>
-      <span className="gsap-typing overflow-hidden border-r-4"></span>
-    </h2>
+    <div className="divide-effect">
+      <h2 ref={scope} className="text-4xl lg:text-5xl font-light w-full overflow-y-hidden">
+        <p className="font-mono text-sm opacity-60 px-1 gsap-lines">{titleEn}</p>
+        <span className="gsap-typing overflow-hidden border-r-4"></span>
+      </h2>
+    </div>
   );
 }

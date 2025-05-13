@@ -8,7 +8,7 @@ export default function Footer() {
         className="flex items-center
           gap-8 justify-between w-full max-w-7xl mt-16 pr-3"
       >
-        <Link href="">
+        <Link href="/">
           <Image
             src="/app-team-logo-white.svg"
             width={280}
@@ -16,13 +16,13 @@ export default function Footer() {
             alt="WINC: アプリチーム"
           />
         </Link>
-        <div className="flex flex-wrap max-w-7xl gap-8">
+        <div className="flex max-w-7xl gap-8">
           <Link href="https://x.com/WINC_waseda">
             <Image
               src="/external-assets/x-logo/logo-white.png"
               width={31}
               height={31}
-              alt="公式X - @"
+              alt="公式X - @WINC_waseda"
               className="p-0.5"
             />
           </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
               src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg"
               width={33}
               height={33}
-              alt="公式Instagram - "
+              alt="公式Instagram - waseda_winc"
             />
           </Link>
         </div>
@@ -53,7 +53,7 @@ export default function Footer() {
       <section className="flex justify-between items-center w-full max-w-7xl text-end py-6 border-t-2 border-gray-100">
         <div>
           <Image
-            src="/winc-logo.svg"
+            src="/winc-logo-white.png"
             width={48}
             height={36}
             alt="WINC"
