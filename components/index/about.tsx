@@ -89,21 +89,21 @@ export default function About() {
           </div>
         </h2>
         <div className="overflow-hidden text-lg text-foreground my-8 divide-effect">
-          <div className="gsap gsap-lines text-sm/8 lg:text-base/12">
-            <p className="text-4xl/16 font-light break-keep">
-              コードを書いて、未来をえがく。
+          <div className="gsap gsap-lines text-sm/8 lg:text-base/12 [&>span]:inline-block">
+            <p className="text-4xl/16 font-light *:inline-block *:break-keep">
+              <span>コードを書いて、</span><span>未来をえがく。</span>
             </p>
-            アプリチームでは起業やビジネス創出を目標として最先端技術を用いたアプリ開発を行います。
+            <span>アプリチームでは起業やビジネス創出を目標として</span><span>最先端技術を用いたアプリ開発を行います。</span>
             <br />
-            実際のシステム開発現場で用いられるプロジェクト管理の方法を採用し、3〜5人のチームでアプリ開発を行います。
+            <span>実際のシステム開発現場で用いられる</span><span>プロジェクト管理の方法を採用し、</span><span>3〜5人のチームでアプリ開発を行います。</span>
             <br />
-            プロジェクトに関わるメンバーのマネジメントが、あなたにとってエンジニア以外の進路にも活きる経験を生みます。
+            <span>プロジェクトに関わるメンバーのマネジメントが、</span><span>あなたにとってエンジニア以外の進路にも</span><span>活きる経験を生みます。</span>
             <br />
-            ユーザー体験の向上やコスト削減を目指し、ステークホルダーとの交渉や関係性の構築にも取り組みます。
+            <span>ユーザー体験の向上やコスト削減を目指し、</span><span>ステークホルダーとの交渉や</span><span>関係性の構築にも取り組みます。</span>
             <br />
-            その過程で得た知見が、経営者的視点の獲得につながります。
+            <span>その過程で得た知見が、</span><span>経営者的視点の獲得につながります。</span>
             <br />
-            個人開発では得られないチーム開発のノウハウを学び、就職後にも生きる経験と繋がりを得ることができます。
+            <span>個人開発では得られないチーム開発のノウハウを学び、</span><span>就職後にも生きる経験と繋がりを得ることができます。</span>
           </div>
         </div>
         <svg
