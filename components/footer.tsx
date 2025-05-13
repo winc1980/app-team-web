@@ -22,7 +22,7 @@ export default function Footer() {
               src="/external-assets/x-logo/logo-white.png"
               width={31}
               height={31}
-              alt="公式X - @"
+              alt="公式X - @WINC_waseda"
               className="p-0.5"
             />
           </Link>
@@ -31,7 +31,7 @@ export default function Footer() {
               src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg"
               width={33}
               height={33}
-              alt="公式Instagram - "
+              alt="公式Instagram - waseda_winc"
             />
           </Link>
         </div>

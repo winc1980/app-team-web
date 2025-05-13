@@ -46,21 +46,21 @@ export default function Header() {
             </ul>
             <footer className="flex flex-col text-zinc-500 text-xs px-8 my-8 gap-8">
               <div className="flex justify-center flex-wrap max-w-7xl gap-8">
-                <Link href="">
+                <Link href="https://x.com/WINC_waseda">
                   <Image
                     src="/external-assets/x-logo/logo-white.png"
                     width={31}
                     height={31}
-                    alt="公式X - @wasedule"
+                    alt="公式X - @WINC_waseda"
                     className="p-0.5"
                   />
                 </Link>
-                <Link href="">
+                <Link href="https://www.instagram.com/waseda_winc/">
                   <Image
                     src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/01 Gradient Glyph/Instagram_Glyph_Gradient.svg"
                     width={33}
                     height={33}
-                    alt="公式Instagram - wasedule"
+                    alt="公式Instagram - waseda_winc"
                   />
                 </Link>
               </div>
@@ -125,7 +125,7 @@ export default function Header() {
                       src="/external-assets/x-logo/logo-white.png"
                       width={24}
                       height={24}
-                      alt="公式X - @wasedule"
+                      alt="公式X - @WINC_waseda"
                       className="p-0.5"
                     />
                   </div>
@@ -138,7 +138,7 @@ export default function Header() {
                       src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_white.svg"
                       width={24}
                       height={24}
-                      alt="公式Instagram - wasedule"
+                      alt="公式Instagram - waseda_winc"
                     />
                   </div>
                 </Link>
