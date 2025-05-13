@@ -24,7 +24,8 @@ export default async function Projects() {
         </h2>
         <div className="divide-effect">
           <div className="flex flex-wrap max-w-7xl">
-            {projects.map((project) => (
+            {/* 上位3件を表示 */}
+            {projects.slice(0, 3).map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}
