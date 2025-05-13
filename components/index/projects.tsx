@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ProjectCard } from "../projects/ProjectCard";
 import { ProjectType } from "@/types/Project";
 import { client } from "@/libs/microcms";
+import SectionHeading from "./section-heading";
 
 async function getProjects(): Promise<ProjectType[]> {
   const data = await client.get({
@@ -16,12 +17,7 @@ export default async function Projects() {
   return (
     <div className="divide-effect flex flex-col justify-center">
       <section className="border-t border-b border-white/10 w-full max-w-7xl py-32 flex flex-col gap-20">
-        <h2 className="text-4xl lg:text-5xl font-light w-full divide-effect gsap-chars">
-          <p className="font-mono text-sm opacity-60 px-1">
-            Our.projects(type:featured);
-          </p>
-          注目のプロジェクト
-        </h2>
+        <SectionHeading titleEn="Our.Projects(type:featured)" titleJa="注目のプロジェクト" />
         <div className="divide-effect">
           <div className="flex flex-wrap max-w-7xl">
             {projects.map((project) => (
