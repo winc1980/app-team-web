@@ -16,7 +16,7 @@ export default function Footer() {
             alt="WINC: アプリチーム"
           />
         </Link>
-        <div className="flex flex-wrap max-w-7xl gap-8">
+        <div className="flex max-w-7xl gap-8">
           <Link href="https://x.com/WINC_waseda">
             <Image
               src="/external-assets/x-logo/logo-white.png"
