@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const onNavigate = () => setIsOpen(false);
 
   return (
     <>
@@ -16,7 +17,7 @@ export default function Header() {
           <div className="flex flex-col h-full justify-between pt-48 pb-24">
             <ul className="flex flex-col gap-4 text-xl font-medium px-8">
               <div className="font-mono">
-                <Link href="/members">
+                <Link onNavigate={onNavigate} href="/members">
                   <div>
                     Members
                   </div>
@@ -30,14 +31,14 @@ export default function Header() {
                 </Link>
               </div>
               <div className="font-mono">
-                <Link href="/projects">
+                <Link onNavigate={onNavigate} href="/projects">
                   <div>
                     Projects
                   </div>
                 </Link>
               </div>
               <div className="font-mono">
-                <Link href="/news">
+                <Link onNavigate={onNavigate} href="/news">
                   <div>
                     News
                   </div>
@@ -65,8 +66,8 @@ export default function Header() {
                 </Link>
               </div>
               <section className="flex flex-wrap gap-3">
-                <Link href="">プライバシーポリシー</Link>
-                <Link href="">利用規約</Link>
+                <Link onNavigate={onNavigate} href="">プライバシーポリシー</Link>
+                <Link onNavigate={onNavigate} href="">利用規約</Link>
               </section>
               <section className="w-full max-w-7xl text-end">
                 <p>© 2025 WINC</p>
