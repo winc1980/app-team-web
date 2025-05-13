@@ -1,13 +1,11 @@
 import ActivityArticle from "./activity-article";
+import SectionHeading from "./section-heading";
 
 export default function Activities() {
   return (
     <div className="divide-effect flex flex-col justify-center">
       <section className="border-t border-b border-white/10 w-full max-w-7xl py-32 flex flex-col gap-20">
-        <h2 className="text-4xl lg:text-5xl font-light w-full divide-effect gsap-chars">
-          <p className="font-mono text-sm opacity-60 px-1">what we do;</p>
-          主な活動内容
-        </h2>
+        <SectionHeading titleEn="what we do:" titleJa="主な活動内容" />
         <div>
           <div className="divide-effect">
             <div className="lg:grid lg:grid-cols-15 max-w-7xl">

@@ -3,6 +3,7 @@ import { client } from "@/libs/microcms";
 import { NewsType } from "@/types/News";
 import { Plus } from "lucide-react";
 import Link from "next/link";
+import SectionHeading from "./section-heading";
 
 async function getNews() {
   const data = await client.get({
@@ -20,10 +21,7 @@ export default async function News() {
     <>
       <div className="divide-effect flex flex-col justify-center">
         <section className="border-t border-b border-white/10 w-full max-w-7xl py-32 flex flex-col gap-20">
-          <h2 className="text-4xl lg:text-5xl font-light w-full divide-effect gsap-chars">
-            <p className="font-mono text-sm opacity-60 px-1">News;</p>
-            ニュース
-          </h2>
+          <SectionHeading titleEn="news;" titleJa="新着情報" />
           <div className="min-h-[80vh] divide-effect flex flex-col items-center">
             {news.map((newsContent: NewsType, i: number) => {
               if (i < 3)
