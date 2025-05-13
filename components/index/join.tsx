@@ -7,6 +7,7 @@ import TextPlugin from "gsap/TextPlugin";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/all";
+import SectionHeading from "./section-heading";
 
 export default function Join() {
   gsap.registerPlugin(TextPlugin);
@@ -71,9 +72,8 @@ export default function Join() {
   return (
     <div className="divide-effect flex flex-col" ref={scope}>
       <section className="gsap-trigger border-t border-b border-white/10 w-full max-w-7xl py-32 relative">
+        <SectionHeading titleEn="join.us" titleJa="新歓情報" />
         <h2 className="overflow-hidden text-5xl lg:text-7xl font-light w-full divide-effect">
-          <p className="font-mono text-sm opacity-60 px-1">About(us);</p>
-          <p className="text-4xl/16 font-light gasp-lines">新歓情報</p>
           <div className="gsap gsap-chars ">
             you{" "}
             <span className="to-text-gradient-child **:bg-linear-to-r **:from-rose-600 **:to-fuchsia-600">
