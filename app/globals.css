@@ -119,5 +119,5 @@ body {
   color: var(--foreground);
   font-family: var(--default-sansserif), var(--font-noto-sans-jp), Arial,
     Helvetica, sans-serif;
-  overscroll-behavior: none;
+  overflow-x: hidden;
 }

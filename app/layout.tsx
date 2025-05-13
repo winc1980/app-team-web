@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
@@ -21,9 +21,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: 'black',
+}
 export const metadata: Metadata = {
   title: "WINC: アプリチーム",
   description: "早稲田コンピューター研究会（WINC）アプリチームの公式ホームページです。",
+  themeColor: "#000000",
 };
 
 export default function RootLayout({
@@ -32,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="overscroll-x-none">
       <body
         className={`${notoSansJp.variable} ${geistMono.variable} ${sans.variable} antialiased min-h-screen bg-gradient-to-br from-blue-700 to-rose-700`}
       >
