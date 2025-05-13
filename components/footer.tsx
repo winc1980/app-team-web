@@ -53,7 +53,7 @@ export default function Footer() {
       <section className="flex justify-between items-center w-full max-w-7xl text-end py-6 border-t-2 border-gray-100">
         <div>
           <Image
-            src="/winc-logo.svg"
+            src="/winc-logo-white.png"
             width={48}
             height={36}
             alt="WINC"
