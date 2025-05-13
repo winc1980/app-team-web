@@ -20,7 +20,8 @@ export default async function Projects() {
         <SectionHeading titleEn="Our.Projects(type:featured)" titleJa="注目のプロジェクト" />
         <div className="divide-effect">
           <div className="flex flex-wrap max-w-7xl">
-            {projects.map((project) => (
+            {/* 上位3件を表示 */}
+            {projects.slice(0, 3).map((project) => (
               <ProjectCard
                 key={project.id}
                 project={project}
