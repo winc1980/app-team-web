@@ -13,7 +13,7 @@ export default function ProjectDetailContainer({
   project,
 }: ProjectDetailContainerProps) {
   return (
-    <div>
+    <div className="w-full max-w-7xl">
       {/* 画像 */}
       <ImageCarousel images={project.images} />
       <div className="w-full max-w-7xl px-8">

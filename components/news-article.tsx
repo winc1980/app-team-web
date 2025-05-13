@@ -25,14 +25,14 @@ export default function NewsArticle({
       });
       const tlLines = gsap.timeline({
         scrollTrigger: {
-          trigger: ".gsap-lines",
+          trigger: ".gsap-trigger",
           start: "top bottom",
-          end: "+=50%", // end after scrolling 500px beyond the start
-          scrub: true,
+          end: "+=50%",
+          toggleActions: "play none none reset",
         },
       });
       tlLines.from(splitLines.lines, {
-        duration: 1,
+        duration: 0.5,
         y: 100,
         autoAlpha: 0,
         stagger: 0.05,
@@ -40,15 +40,15 @@ export default function NewsArticle({
 
       const tlObjects = gsap.timeline({
         scrollTrigger: {
-          trigger: ".reveal-on-scroll",
+          trigger: ".gsap-trigger",
           start: "top bottom",
-          end: "+=50%", // end after scrolling 500px beyond the start
-          scrub: true,
+          end: "+=50%",
+          toggleActions: "play none none reset",
         },
       });
       tlObjects.from(".reveal-on-scroll", {
-        duration: 1,
-        y: 100,
+        duration: 0.5,
+        y: 50,
         autoAlpha: 0,
       });
     },
@@ -60,7 +60,7 @@ export default function NewsArticle({
       ref={scope}
       className="bg-foreground/10 mb-8 divide-effect w-full max-w-7xl"
     >
-      <div className="bg-background rounded-2xl p-4 m-2">
+      <div className="bg-background rounded-2xl p-4 m-2 gsap-trigger">
         <h3 className="text-3xl font-light w-full divide-effect gsap-lines">
           <p className="font-mono text-sm opacity-60 px-1">
             {newsContent.createdAt}
