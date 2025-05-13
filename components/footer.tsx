@@ -8,7 +8,7 @@ export default function Footer() {
         className="flex items-center
           gap-8 justify-between w-full max-w-7xl mt-16 pr-3"
       >
-        <Link href="">
+        <Link href="/">
           <Image
             src="/app-team-logo-white.svg"
             width={280}
