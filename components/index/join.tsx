@@ -22,12 +22,12 @@ export default function Join() {
         scrollTrigger: {
           trigger: ".gsap-chars",
           start: "top bottom",
-          end: "+=90%", // end after scrolling 500px beyond the start
+          end: "+=66.6%", // end after scrolling 500px beyond the start
           scrub: true,
         },
       });
       tlChars.from(splitChars.chars, {
-        duration: 1,
+        duration: 0.8,
         y: 100,
         autoAlpha: 0,
         stagger: 0.05,
@@ -41,7 +41,7 @@ export default function Join() {
         scrollTrigger: {
           trigger: ".gsap-lines",
           start: "top bottom",
-          end: "+=66.6%", // end after scrolling 500px beyond the start
+          end: "+=50%", // end after scrolling 500px beyond the start
           scrub: true,
         },
       });
@@ -56,7 +56,7 @@ export default function Join() {
         scrollTrigger: {
           trigger: ".gsap-lines",
           start: "top bottom",
-          end: "+=66.6%", // end after scrolling 500px beyond the start
+          end: "+=50%", // end after scrolling 500px beyond the start
           scrub: true,
         },
       });

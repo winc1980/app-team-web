@@ -38,7 +38,7 @@ export default function Message() {
         scrollTrigger: {
           trigger: ".gsap-lines",
           start: "top bottom",
-          end: "+=66.6%", // end after scrolling 500px beyond the start
+          end: "+=50%", // end after scrolling 500px beyond the start
           scrub: true,
         },
       });
@@ -53,7 +53,7 @@ export default function Message() {
         scrollTrigger: {
           trigger: ".gsap-lines",
           start: "top bottom",
-          end: "+=66.6%", // end after scrolling 500px beyond the start
+          end: "+=50%", // end after scrolling 500px beyond the start
           scrub: true,
         },
       });

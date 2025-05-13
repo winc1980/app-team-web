@@ -20,22 +20,6 @@ export default function SectionHeading({
 
   useGSAP(
     () => {
-      const splitChars = SplitText.create(".gsap-chars", { type: "chars" });
-      const tlChars = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".gsap-chars",
-          start: "bottom bottom",
-          end: "+=90%", // end after scrolling 500px beyond the start
-          scrub: true,
-        },
-      });
-      tlChars.from(splitChars.chars, {
-        duration: 1,
-        y: 100,
-        autoAlpha: 0,
-        stagger: 0.05,
-      });
-
       const splitLines = SplitText.create(".gsap-lines", {
         type: "lines",
         mask: "lines",
@@ -44,38 +28,51 @@ export default function SectionHeading({
         scrollTrigger: {
           trigger: ".gsap-lines",
           start: "top bottom",
-          end: "+=66.6%", // end after scrolling 500px beyond the start
-          scrub: true,
+          end: "+=50%",
+          toggleActions: "play none none reverse",
         },
       });
       tlLines.from(splitLines.lines, {
-        duration: 1,
+        duration: 0.8,
         y: 100,
         autoAlpha: 0,
         stagger: 0.05,
       });
 
-      const tlObjects = gsap.timeline({
+      const typingTl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".gsap-lines",
+          trigger: ".gsap-typing",
           start: "top bottom",
-          end: "+=66.6%", // end after scrolling 500px beyond the start
-          scrub: true,
+          end: "+=50%",
+          toggleActions: "play none none reset",
         },
       });
-      tlObjects.from(".reveal-on-scroll", {
-        duration: 1,
-        y: 100,
-        autoAlpha: 0,
+      typingTl.to(".gsap-typing", {
+        autoAlpha: 1,
+        text: titleJa,
+        duration: titleJa.length * 0.1,
       });
+
+      gsap.fromTo(
+        ".gsap-typing",
+        1,
+        {
+          "border-right-color": "rgba(255,255,255,0.8)",
+        },
+        {
+          "border-right-color": "rgba(255,255,255,0)",
+          repeat: -1,
+          ease: "steps(1)",
+        },
+      );
     },
     { scope: scope }
   );
 
   return (
     <h2 ref={scope} className="text-4xl lg:text-5xl font-light w-full overflow-y-hidden divide-effect">
-      <p className="font-mono text-sm opacity-60 px-1">{titleEn}</p>
-      <span className="gsap-chars">{titleJa}</span>
+      <p className="font-mono text-sm opacity-60 px-1 gsap-lines">{titleEn}</p>
+      <span className="gsap-typing overflow-hidden border-r-4"></span>
     </h2>
   );
 }
