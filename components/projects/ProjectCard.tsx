@@ -24,8 +24,6 @@ export const ProjectCard = ({ project, className }: { project: ProjectType, clas
               <p className="font-mono text-sm opacity-60">
                 {project.completeDate != null ? "Released" : "In development"}
                 {" / "}
-                {/* project.technologies[0][1] */
-                /* これどういう仕様なんだ */}
                 {techs[0].name}
               </p>
               {project.title}
