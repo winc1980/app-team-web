@@ -1,8 +1,13 @@
 import { ProjectType } from "@/types/Project";
 import Image from "next/image";
 import Link from "next/link";
+import { parseTech } from "@/utils/cms/parseTech";
 
 export const ProjectCard = ({ project, className }: { project: ProjectType, className?: string }) => {
+    const techs = parseTech(project.technologies);
+
+    console.log(techs);
+
   return (
     <Link href={`/projects/${project.id}`} className={className}>
       <article className="bg-foreground/10 border border-white/10 w-full @container p-2 h-full transition-all duration-300 **:transition-all **:duration-300">
@@ -21,6 +26,7 @@ export const ProjectCard = ({ project, className }: { project: ProjectType, clas
                 {" / "}
                 {/* project.technologies[0][1] */
                 /* これどういう仕様なんだ */}
+                {techs[0].name}
               </p>
               {project.title}
             </h3>
