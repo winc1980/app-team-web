@@ -27,7 +27,6 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "WINC: アプリチーム",
   description: "早稲田コンピューター研究会（WINC）アプリチームの公式ホームページです。",
-  themeColor: "#000000",
 };
 
 export default function RootLayout({

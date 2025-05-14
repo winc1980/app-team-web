@@ -4,7 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { CmsImageType } from "@/types/CmsImage";
 import Image from "next/image";
 import { DotButton, useDotButton } from "./carouselDotButton";
-import { ChevronLeft, ChevronLeftCircle, ChevronRight, ChevronRightCircle } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export function ImageCarousel({ images: images }: { images: CmsImageType[] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -54,9 +54,8 @@ export function ImageCarousel({ images: images }: { images: CmsImageType[] }) {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={`${
-                index === selectedIndex ? "bg-foreground" : "bg-foreground/50"
-              } w-2 h-2 cursor-pointer rounded-xl`}
+              className={`${index === selectedIndex ? "bg-foreground" : "bg-foreground/50"
+                } w-2 h-2 cursor-pointer rounded-xl`}
             />
           ))}
         </div>

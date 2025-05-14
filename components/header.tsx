@@ -136,7 +136,7 @@ export default function Header() {
                 <Link href="https://www.instagram.com/waseda_winc/">
                   <div>
                     <Image
-                      src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_white.svg"
+                      src="/external-assets/IG_brand_asset_pack_2023/01 Static Glyph/02 White Glyph/Instagram_Glyph_White.svg"
                       width={24}
                       height={24}
                       alt="公式Instagram - waseda_winc"
