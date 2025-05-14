@@ -1,7 +1,3 @@
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import ProjectSection from "@/components/projects/ProjectSection";
-import Script from "next/script";
 import PageSteper from "@/components/projects/detail/PageSteper";
 import ProjectDetailContainer from "@/components/projects/detail/ProjectDetailContainer";
 import { client } from "@/libs/microcms";
@@ -19,9 +15,9 @@ async function getProject(id: string): Promise<ProjectType> {
 export default async function ProjectDetail({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  const id = params.id as string;
+  const id = (await params).id;
   const project = await getProject(id);
 
   console.log(project);

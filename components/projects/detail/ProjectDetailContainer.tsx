@@ -3,7 +3,6 @@ import Overview from "./overview/Overview";
 import ContributorsSection from "./contributors/ContributorsSection";
 import { ProjectType } from "@/types/Project";
 import { ImageCarousel } from "./carousel/carousel";
-import { CmsImageType } from "@/types/CmsImage";
 
 interface ProjectDetailContainerProps {
   project: ProjectType;
