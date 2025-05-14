@@ -23,7 +23,7 @@ export default async function News() {
             <div className="w-full max-w-7xl">
               <div className="flex flex-col justify-center">
                 <section className="border-t border-b border-white/10 w-full max-w-7xl py-8">
-                  <h2 className="text-5xl font-light w-full divide-effect">
+                  <h2 className="text-3xl lg:text-5xl font-light w-full divide-effect">
                     <div className="pl-8">
                       <p className="font-mono text-sm opacity-60 px-1">
                         Our.latest.news();
@@ -31,8 +31,8 @@ export default async function News() {
                       ニュース
                     </div>
                   </h2>
-                  <div className="text-md text-foreground py-8 divide-effect">
-                    <p className="p-8">私達の最新ニュースをお届けします。</p>
+                  <div className="text-md text-foreground pt-8">
+                    <p className="px-8 divide-effect">私達の最新ニュースをお届けします。</p>
                   </div>
                 </section>
               </div>
@@ -40,7 +40,7 @@ export default async function News() {
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
           </div>
         </section>
-        <section className="w-full flex flex-col items-center backdrop-blur backdrop-saturate-150 backdrop-brightness-125 divide-effect">
+        <section className="w-full flex flex-col items-center divide-effect bg-background">
           <div className="w-full max-w-[1440px] flex flex-row items-stretch relative">
             <div className="grow-[1] border-x border-x-(--pattern-fg) bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)] bg-[size:10px_10px] bg-fixed max-lg:hidden [--pattern-fg:var(--color-white)]/10"></div>
             <div className="w-full max-w-7xl">
