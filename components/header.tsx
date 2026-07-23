@@ -204,30 +204,6 @@ export default function Header() {
             </div>
           </div>
         </div>
-        <div
-          className={`fixed hidden md:block top-0 left-0 w-full border-b-4 p-8 transition-all duration-500 ${expanded ? "h-[50vh] border-foreground bg-background" : "h-0 border-transparent bg-transparent"}`}
-        >
-          {expanded && (
-            <div className="w-full max-w-7xl mx-auto h-full flex gap-8 pt-16">
-              <Link
-                href="/projects#apps"
-                className="grow-3 bg-black/10 rounded-xl h-full grow flex items-center p-8 bg-cover hover:bg-  bg-[url(/test-images/Gemini_Generated_Image_b0pgxyb0pgxyb0pg.png)]"
-              >
-                <p className="w-fit text-2xl font-semibold bg-background p-2 rounded">
-                  アプリ開発
-                </p>
-              </Link>
-              <Link
-                href="/projects#web"
-                className="grow-2 bg-black/10 rounded-xl h-full grow flex items-center p-8 bg-cover bg-[url(/test-images/Gemini_Generated_Image_b0pgxyb0pgxyb0pg.png)]"
-              >
-                <p className="w-fit text-2xl font-semibold bg-background p-2 rounded">
-                  ホームページ制作
-                </p>
-              </Link>
-            </div>
-          )}
-        </div>
       </header>
     </div>
   );
