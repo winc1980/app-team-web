@@ -11,10 +11,9 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollDirection, isScrollTop] = useScrollStatus();
   const onNavigate = () => setIsOpen(false);
-  const [expanded, setExpanded] = useState<boolean>(false);
 
   return (
-    <div onMouseLeave={() => setExpanded(false)}>
+    <div>
       <div
         id="mobile-menu-bg"
         className={`${
@@ -151,7 +150,6 @@ export default function Header() {
             <div className="flex gap-6 items-center uppercase font-bold">
               <div
                 className="hover:border-b-2 border-foreground transition-all"
-                onMouseEnter={() => setExpanded(false)}
               >
                 <Link href="/blog">
                   <div>ブログ</div>
@@ -159,7 +157,6 @@ export default function Header() {
               </div>
               <div
                 className="hover:border-b-2 border-foreground transition-all"
-                onMouseEnter={() => setExpanded(true)}
               >
                 <Link href="/projects">
                   <div>プロジェクト・制作実績</div>
@@ -167,7 +164,6 @@ export default function Header() {
               </div>
               <div
                 className="hover:border-b-2 border-foreground transition-all"
-                onMouseEnter={() => setExpanded(false)}
               >
                 <Link href="/contacts">
                   <div>お問い合わせ</div>
