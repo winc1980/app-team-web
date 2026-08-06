@@ -63,7 +63,10 @@ export default async function Home() {
             <div className="w-full max-w-7xl">
               <LearnSection description={basicSettings['about_description']} image={basicSettings['about_image']} />
               {/* <Activities basicSettings={basicSettings} /> */}
-              <Sponsors />
+              {/**
+               * TODO: 協賛企業が安定したら復活させる
+               * <Sponsors />
+               **/}
               <Projects />
               {/* 【TODO】Instagramのアカウント設定 */}
               {/* <Instagram /> */}
